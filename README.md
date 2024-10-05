@@ -9,6 +9,7 @@
 -[Technologies Used](#technologies-used)
 - [Part 1: Data Exploration](#part-1-data-exploration)
 - [Part 2: Data Transformation and Analysis](#part-2-data-transformation-and-analysis)
+- [Part 3: Order Totals Calculation](#part-3-order-totals-calculation)
 - [Conclusion](#conclusion)
 
 
@@ -77,6 +78,30 @@ Finally, we calculate the `profit` for each line item by subtracting the `line_c
 
 ### DataFrame Overview
 The updated DataFrame now includes the following relevant columns: `line_subtotal`, `shipping_price`, `total_before_tax`, `sales_tax`, `line_price`, `line_cost`, and `profit`.
+---
+# Part 3: Order Totals Calculation
+
+## Overview
+
+In Part 3, we focus on calculating the total amounts for specific orders in our e-commerce dataset. This step is crucial for validating our previous calculations and ensuring that our data analysis is accurate and reliable. 
+
+## Steps
+
+### 1. Calculate Order Totals
+
+We group the DataFrame by `order_id` and sum the `line_price` for each order. This process aggregates all line prices associated with each order, providing the total amount for each unique `order_id`.
+
+### 2. Validate Specific Order Totals
+
+To verify our calculations, we examine specific `order_id`s of interest. We loop through these defined `order_id`s and print the total for each order if it exists in the calculated totals.
+
+### Code Explanation
+
+- **Group By Operation**: We use the `groupby()` function to group the DataFrame based on `order_id`, followed by the `sum()` function to calculate the total line price for each order.
+  
+- **Validation Loop**: We check if the specified `order_id`s are present in the `order_totals` index. If they are, we print the total amount formatted to two decimal places.
+
+>>This part of the project ensures that the calculated totals for each order are accurate and reflect the transformations made in previous sections. Validating these totals is essential for maintaining the integrity and reliability of the data analysis process.
 
 
 ## Conclusion
