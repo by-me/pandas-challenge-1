@@ -1,6 +1,17 @@
 # Pandas Data Analysis Challenge
 
 
+
+
+
+# Table of Contents
+- [Description](#description)
+-[Technologies Used](#technologies-used)
+- [Part 1: Data Exploration](#part-1-data-exploration)
+- [Part 2: Data Transformation and Analysis](#part-2-data-transformation-and-analysis)
+- [Conclusion](#conclusion)
+
+
 ## Description
 This project is a module challenge centered on data analysis using Python's Pandas library. The main goal is to analyze a dataset from a fictional e-commerce company, exploring various aspects such as customer behavior, product popularity, and profitability. This hands-on experience enhances skills in examining, cleaning, processing, and extracting valuable insights from large datasets.
 
@@ -8,6 +19,8 @@ This project is a module challenge centered on data analysis using Python's Pand
 * Python
 * Pandas
 * Jupyter Notebook
+
+---
 
 # Part 1: Data Exploration
 
@@ -35,7 +48,8 @@ This section involves exploring the dataset from a fictional e-commerce company 
    - To find out how many total units the client with the most entries ordered, I first used `idxmax()` to identify this client and then filtered the DataFrame to sum the 'qty' column for their orders.
 
 >>In this part of the project, we successfully explored the dataset and identified key categories, subcategories, and clients. This foundational analysis sets the stage for more in-depth data transformation and analysis in subsequent parts of the project.
-
+ 
+---
 
 # Part 2: Data Transformation and Analysis
 
