@@ -74,9 +74,8 @@ Using the `assign()` function, we create several new columns:
 We introduce the `line_cost` column, representing the total cost associated with each line item. This includes both the cost of goods (`unit_cost * qty`) and the associated shipping price.
 
 ### 5. Profit Calculation
-Finally, we calculate the `profit` for each line item by subtracting the `line_cost` from the `line_price`. This provides insight into the earnings generated from each sale after accounting for the costs.
+Finally, we calculate the `profit` for each line item by subtracting the `line_cost` from the `line_price`. This provides insight into the earning
 
-### DataFrame Overview
 The updated DataFrame now includes the following relevant columns: `line_subtotal`, `shipping_price`, `total_before_tax`, `sales_tax`, `line_price`, `line_cost`, and `profit`.
 ---
 # Part 3: Order Totals Calculation
@@ -102,6 +101,45 @@ To verify our calculations, we examine specific `order_id`s of interest. We loop
 - **Validation Loop**: We check if the specified `order_id`s are present in the `order_totals` index. If they are, we print the total amount formatted to two decimal places.
 
 >>This part of the project ensures that the calculated totals for each order are accurate and reflect the transformations made in previous sections. Validating these totals is essential for maintaining the integrity and reliability of the data analysis process.
+
+---
+## Part 4: Summarize and Analyze
+
+In this part, we create a summary DataFrame to analyze the financial metrics of our top 5 clients. This analysis is essential for understanding client contributions and optimizing future business strategies.
+
+### Key Steps
+
+1. **Summary Data Structure**:
+   We initialize a dictionary to hold summary data for each of the top 5 clients, including total quantities purchased, shipping prices, revenue, costs, and profits.
+
+2. **Calculate Totals for Each Client**:
+   For each top client ID, we filter the DataFrame to isolate their orders and compute:
+   - **Total Units Purchased**: The sum of the `qty` column.
+   - **Total Shipping Price**: The sum of the `shipping_price` column.
+   - **Total Revenue**: The sum of the `line_price` column, representing the total amount received from the client.
+   - **Total Cost**: The sum of the `line_cost` column, representing the total cost incurred by the business for fulfilling the client's orders.
+   - **Total Profit**: The sum of the `profit` column, representing the net profit from the client's orders.
+
+3. **Create Summary DataFrame**:
+   We convert the summary data dictionary into a pandas DataFrame.
+
+4. **Formatting and Renaming Columns**:
+   - We define a function to convert dollar amounts to millions, making the figures more manageable for presentation.
+   - The relevant columns (`shipping_price`, `line_price`, `line_cost`, and `line_profit`) are updated to reflect their values in millions.
+   - Finally, we rename the columns for clarity:
+     - `qty` to `Units`
+     - `shipping_price` to `Shipping (millions)`
+     - `line_price` to `Total Revenue (millions)`
+     - `line_cost` to `Total Cost (millions)`
+     - `line_profit` to `Total Profit (millions)`
+
+5. **Final Display**:
+   We reset the index of the DataFrame for neatness and display the formatted summary DataFrame.
+
+
+>> In this analysis, we identified the top five clients based on quantity purchased and calculated their total spending, including shipping costs, revenue, and profit. The summary revealed key insights into client spending behavior, highlighting the most profitable clients and providing a clear overview of their contributions to overall revenue. This information can inform strategic decisions to enhance client relationships and optimize pricing strategies.
+
+
 
 
 ## Conclusion
