@@ -77,7 +77,7 @@ We introduce the `line_cost` column, representing the total cost associated with
 ### 5. Profit Calculation
 Finally, we calculate the `profit` for each line item by subtracting the `line_cost` from the `line_price`. This provides insight into the earning
 
-The updated DataFrame now includes the following relevant columns: `line_subtotal`, `shipping_price`, `total_before_tax`, `sales_tax`, `line_price`, `line_cost`, and `profit`.
+>>The updated DataFrame now includes the following relevant columns: `line_subtotal`, `shipping_price`, `total_before_tax`, `sales_tax`, `line_price`, `line_cost`, and `profit`.
 ---
 # Part 3: Order Totals Calculation
 
@@ -101,7 +101,7 @@ To verify our calculations, we examine specific `order_id`s of interest. We loop
   
 - **Validation Loop**: We check if the specified `order_id`s are present in the `order_totals` index. If they are, we print the total amount formatted to two decimal places.
 
->>This part of the project ensures that the calculated totals for each order are accurate and reflect the transformations made in previous sections. Validating these totals is essential for maintaining the integrity and reliability of the data analysis process.
+>> This part of the project ensures that the calculated totals for each order are accurate and reflect the transformations made in previous sections. Validating these totals is essential for maintaining the integrity and reliability of the data analysis process.
 
 ---
 ## Part 4: Summarize and Analyze
@@ -140,9 +140,6 @@ In this part, we create a summary DataFrame to analyze the financial metrics of 
 
 ### Summary of Findings
 In this analysis, we identified the top five clients based on the quantity of units purchased and calculated their total spending, including shipping costs, total revenue, and profit. The findings provided key insights into client spending behavior, showcasing the most profitable clients and their contributions to overall revenue. These insights can help inform strategic decisions to strengthen client relationships and refine pricing strategies for increased profitability.
-
-
-
 
 ## Conclusion
 This project enhanced my understanding of data exploration, transformation, and analysis using Pandas. I gained practical experience in manipulating datasets to extract useful business insights, preparing me for more complex data scenarios in the future.
